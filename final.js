@@ -79,10 +79,28 @@ jQuery(document).ready(function(){
   // If the link exists, add a class to the <html> element
   if (menuHasMyAccount.length > 0) {
     jQuery('html').addClass('loggedIn');
+    let path = window.location.pathname.split("/").filter(Boolean).pop();
+  	console.log(path);
+  	// Add active class based on URL match
+    $(".user-menu li a").each(function () {
+        let menuItem = $(this).attr("href").split("/").filter(Boolean).pop();
+	    if (menuItem === path) {
+	        $(this).parent().addClass("active"); // Add active class to the parent <li>
+	    }
+    });
   }
 
   if (mobileMenu.length > 0){
   	jQuery('html').addClass('loggedIn');
+  	let path = window.location.pathname.split("/").filter(Boolean).pop();
+  	console.log(path);
+  	// Add active class based on URL match
+    $(".user-menu li a").each(function () {
+        let menuItem = $(this).attr("href").split("/").filter(Boolean).pop();
+	    if (menuItem === path) {
+	        $(this).parent().addClass("active"); // Add active class to the parent <li>
+	    }
+    });
   } 
 
 
