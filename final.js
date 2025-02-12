@@ -80,14 +80,31 @@ jQuery(document).ready(function(){
   if (menuHasMyAccount.length > 0) {
     jQuery('html').addClass('loggedIn');
     let path = window.location.pathname.split("/").filter(Boolean).pop();
-  	console.log(path);
+
+    //possible paths
+    if(path === 'available-surveys'){
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/available-surveys"]').parent().addClass("active");
+    } else if(path === 'completed-surveys') {
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/available-surveys"]').parent().addClass("active");
+    } else if(path === 'account-balance'){
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/account-balance"]').parent().addClass("active");
+    } else if(path === 'fun-with-empowered-surveys'){
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/fun-with-empowered-surveys"]').parent().addClass("active");
+    } else if(path === 'refer-a-friend'){
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/fun-with-empowered-surveys"]').parent().addClass("active");
+    } else if(path === 'my-profile'){
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/my-profile"]').parent().addClass("active");
+    } else if(path === 'unsubscribe'){
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/my-profile"]').parent().addClass("active");
+    }
+
   	// Add active class based on URL match
-    $(".user-menu li a").each(function () {
-        let menuItem = $(this).attr("href").split("/").filter(Boolean).pop();
-	    if (menuItem === path) {
-	        $(this).parent().addClass("active"); // Add active class to the parent <li>
-	    }
-    });
+    // $(".user-menu li a").each(function () {
+    //     let menuItem = $(this).attr("href").split("/").filter(Boolean).pop();
+	   //  if (menuItem === path) {
+	   //      $(this).parent().addClass("active"); // Add active class to the parent <li>
+	   //  }
+    // });
   }
 
   if (mobileMenu.length > 0){
@@ -95,12 +112,29 @@ jQuery(document).ready(function(){
   	let path = window.location.pathname.split("/").filter(Boolean).pop();
   	console.log(path);
   	// Add active class based on URL match
-    $(".user-menu li a").each(function () {
-        let menuItem = $(this).attr("href").split("/").filter(Boolean).pop();
-	    if (menuItem === path) {
-	        $(this).parent().addClass("active"); // Add active class to the parent <li>
-	    }
-    });
+    // $(".user-menu li a").each(function () {
+    //     let menuItem = $(this).attr("href").split("/").filter(Boolean).pop();
+	   //  if (menuItem === path) {
+	   //      $(this).parent().addClass("active"); // Add active class to the parent <li>
+	   //  }
+    // });
+
+    //possible paths
+    if(path === 'available-surveys'){
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/available-surveys"]').parent().addClass("active");
+    } else if(path === 'completed-surveys') {
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/available-surveys"]').parent().addClass("active");
+    } else if(path === 'account-balance'){
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/account-balance"]').parent().addClass("active");
+    } else if(path === 'fun-with-empowered-surveys'){
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/fun-with-empowered-surveys"]').parent().addClass("active");
+    } else if(path === 'refer-a-friend'){
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/fun-with-empowered-surveys"]').parent().addClass("active");
+    } else if(path === 'my-profile'){
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/my-profile"]').parent().addClass("active");
+    } else if(path === 'unsubscribe'){
+    	$('.user-menu li > a[href="https://apd.opinioninsight.com/portal/community_2_8_1.php/my-profile"]').parent().addClass("active");
+    }
   } 
 
 
